@@ -1,0 +1,14 @@
+class Solution {
+    public int maximumIntegerValue(String s) {
+    int result = s.charAt(0)-'0';
+    for (int i=1;i<s.length();i++) {
+        int digit = s.charAt(i)-'0';
+        if (result<=1 || digit<=1) {
+            result += digit;
+        } else {
+            result *= digit;
+        }
+    }
+    return result;
+    }
+}
